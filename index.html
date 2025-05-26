@@ -71,8 +71,8 @@
                             <h1>About Me</h1>
                             <p class="intro">I'm <span class="highlight">Will Palaia</span>, a third-year student at <span class="highlight">UMass Amherst</span> studying <span class="highlight">Computer Science</span> and <span class="highlight">Economics</span>.</p>
                             <p class="details">
-                                Currently, I work as a <span class="highlight">Software Engineer Intern (SWE)</span> at 
-                                <span class="highlight">Imago Rehab</span>, a virtual therapy startup based in Lowell, MA.
+                                I'm a <span class="highlight">Software Engineer Intern (SWE)</span> at 
+                                <span class="highlight">Wellington Management</span>, an asset management company based in Boston.
                             </p>
                             <p class="details">
                                 Previously, I was a <span class="highlight">Software Engineer Intern (SWE)</span> at 
@@ -80,7 +80,7 @@
                             </p>
                             <p class="details">
                                 I am currently interested in <span class="highlight">reinforcement learning</span> 
-                                and the applications it has in my current life.
+                                and the applications it has in my current life. Right now I am looking into portfolio rebalancing using deep Q-learning.
                             </p>
                             <p class="details">In my free time, I enjoy stock trading, poker, soccer, golf, tennis, and drumming.</p>
                         </div>
@@ -89,7 +89,7 @@
                                 <a href="https://imagorehab.com/" target="_blank" rel="noopener noreferrer">
                                     <div class="about-card">
                                         <div class="about-card-icon-wrapper">
-                                            <div class="about-card-icon"><img style="vertical-align: middle;" src="https://cdn-ikpmbhp.nitrocdn.com/fdpTIVesOyCYskAZAUTznBVgVgNCPLYY/assets/images/source/rev-c1c2b36/imagorehab.com/wp-content/uploads/2023/12/logo-sticky.svg" /></div>
+                                            <div class="about-card-icon"><img src="assets/imago.png" /></div>
                                         </div>
                                         <div class="about-card-title">
                                             Software Engineer Intern
@@ -326,5 +326,35 @@
         </div>
         <!-- <script type="text/javascript" src="script.js"></script> -->
         <!-- 8a%#J67% -->
+
+        <!-- Chat Widget -->
+        <div class="chat-widget">
+            <div class="chat-bubble" id="chatBubble">
+                <i class="fas fa-comment"></i>
+            </div>
+            <div class="chat-container" id="chatContainer">
+                <div class="chat-header">
+                    <span>Chat with Will's Virtual Assistant</span>
+                    <button class="close-chat" id="closeChat">&times;</button>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot">
+                        Hi! I'm Will's virtual assistant. How can I help you today?
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Type your message...">
+                    <button id="sendMessage">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+        <!-- Chat Widget Script -->
+        <script src="chat.js"></script>
     </body>
 </html>
