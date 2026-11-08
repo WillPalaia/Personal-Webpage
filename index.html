@@ -1,360 +1,735 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="author" content="Will Palaia" />
-        <meta name="description" content="Will&#39;s Personal Website" />
-        <meta name="keywords" content="Will Palaia, Will, Palaia, willpalaia, software engineer" />
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c0e12" />
+  <meta name="author" content="Will Palaia" />
+  <meta name="description" content="Will Palaia — Software Engineer at Wellington Management. Building production AI systems, FastMCP data lake infrastructure, and quantitative trading engines." />
+  
+  <title>Will Palaia — Software Engineer</title>
+  
+  <link rel="shortcut icon" href="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/blue2.svg" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  
+  <!-- Custom Editorial CSS -->
+  <link rel="stylesheet" href="app.css" />
 
-        <meta itemprop="name" content="Will Palaia" />
-        <!--<meta itemprop="image" content="https://raw.githubusercontent.com/adamalston/v1/master/assets/projects/website.png" />-->
-        <meta itemprop="description" content="Will&#39;s Personal Website" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            surface: '#13171f',
+            cardBg: '#181d26',
+            goldWarm: '#c5a059',
+            wineMuted: '#be185d'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0c0e12] text-slate-100 min-h-screen relative selection:bg-[#c5a059] selection:text-black">
 
-        <meta property="og:title" content="Will Palaia" />
-        <meta property="og:url" content="https://willpalaia.com/" />
-        <!--<meta property="og:image" content="https://raw.githubusercontent.com/adamalston/v1/master/assets/projects/website.png" />-->
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:description" content="Personal Website" />
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Will Palaia | Personal Website" />
-        <meta property="og:locale" content="en_US" />
+  <!-- Soft ambient background warmth -->
+  <div class="ambient-glow"></div>
 
-        <title>Will Palaia</title>
+  <div class="relative z-10 flex flex-col min-h-screen">
+
+    <!-- ======================================================================
+         NAVIGATION BAR
+         Quiet, modern, refined
+         ====================================================================== -->
+    <header class="sticky top-0 z-50 border-b border-white/5 bg-[#0c0e12]/80 backdrop-blur-md px-4 sm:px-8 py-4 transition-all">
+      <div class="max-w-5xl mx-auto flex items-center justify-between">
         
-        <link rel="shortcut icon" href="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/blue2.svg" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
+        <!-- Brand -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-7 h-7 rounded-lg bg-[#181d26] border border-white/10 text-amber-300 font-serif font-bold text-sm flex items-center justify-center">
+            WP
+          </div>
+          <div class="flex flex-col">
+            <span class="font-semibold text-sm tracking-tight text-white group-hover:text-amber-200 transition-colors">
+              Will Palaia
+            </span>
+            <span class="text-[11px] text-slate-400 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              Wellington Management &middot; Boston
+            </span>
+          </div>
+        </a>
 
-    <body>
-        <div class="navbar">
-            <div class="navbar-container">
-                <div class="nav-item"><a class="nav-item-link" href="#hero">Home</a></div>
-                <div class="nav-item"><a class="nav-item-link" href="#about">About</a></div>
-                <div class="nav-item"><a class="nav-item-link" href="#projects">Projects</a></div>
-                <div class="nav-item"><a class="nav-item-link" href="Will_Palaia_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></div>
-            </div>
+        <!-- Minimal Navigation -->
+        <nav class="hidden md:flex items-center gap-6 text-xs text-slate-400 font-medium">
+          <a href="#about" class="nav-link hover:text-white transition-colors">About</a>
+          <a href="#projects" class="nav-link hover:text-white transition-colors">Projects</a>
+          <a href="#experience" class="nav-link hover:text-white transition-colors">Experience</a>
+          <a href="#stack" class="nav-link hover:text-white transition-colors">Stack</a>
+          <a href="#contact" class="nav-link hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Resume Action -->
+        <div class="flex items-center gap-3">
+          <a href="Will_Palaia_Resume.pdf" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-slate-200 hover:text-white transition-all flex items-center gap-1.5">
+            <i class="far fa-file-pdf text-rose-400"></i>
+            <span>Resume</span>
+          </a>
         </div>
 
-        <div id="hero" class="hero">
-            <div class="hero-container">
-                <div class="hero-profile">
+      </div>
+    </header>
 
-                    <div class="hero-profile-img-wrapper"><img class="hero-profile-img" src="assets/myAvatar.svg" /></div>
-
-                    <div class="hero-profile-content">
-                        <div class="hero-headline">Will Palaia</div>
-                        <div class="hero-text">Software Engineer</div>
-                    </div>
-
-                    <div class="hero-icons">
-                        <a href="https://github.com/WillPalaia" target="_blank" class="icon-link" title="GitHub"><i class="fab fa-github"></i> </a>
-                        <a href="https://www.linkedin.com/in/willpalaia/" target="_blank" class="icon-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="Will_Palaia_Resume.pdf" target="_blank" class="icon-link" rel="noopener noreferrer" title="Resume"><i class="far fa-file"></i></a>
-                        <a href="mailto:willpalaia2@gmail.com" target="_blank" rel="noopener noreferrer" class="icon-link" title="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-
-                    <a class="arrow fa fa-arrow-down fa-3x" href="#about"></a>
-
-                </div>
-            </div>
+    <!-- ======================================================================
+         HERO SECTION
+         Clean typography + Bespoke interactive playing cards
+         ====================================================================== -->
+    <section id="hero" class="max-w-5xl mx-auto w-full px-4 sm:px-8 pt-16 sm:pt-24 pb-16 flex flex-col md:flex-row items-center justify-between gap-12">
+      
+      <!-- Left Column: Biography & Headline -->
+      <div class="max-w-xl text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-amber-200/90 font-medium mb-6">
+          <span>♠</span> Software Engineer &middot; Boston, MA
         </div>
 
-        <div id="about" class="about">
-            <div class="container about-container">
-                <div class="row">
-                    <div class="col">
-                        <div class="container about-section">
-                            <h1>About Me</h1>
-                            <p class="intro">I'm <span class="highlight">Will Palaia</span>, a third-year student at <span class="highlight">UMass Amherst</span> studying <span class="highlight">Computer Science</span> and <span class="highlight">Economics</span>.</p>
-                            <p class="details">
-                                I'm a <span class="highlight">Software Engineer Intern (SWE)</span> at 
-                                <span class="highlight">Wellington Management</span>, an asset management company based in Boston.
-                            </p>
-                            <p class="details">
-                                Previously, I was a <span class="highlight">Software Engineer Intern (SWE)</span> at 
-                                <span class="highlight">ISO New England</span> and a <span class="highlight">Software Developer Intern (SDE)</span> at <span class="highlight">BigBear.ai</span>.
-                            </p>
-                            <p class="details">
-                                I am currently interested in <span class="highlight">reinforcement learning</span> 
-                                and the applications it has in my current life. Right now I am looking into portfolio rebalancing using deep Q-learning.
-                            </p>
-                            <p class="details">In my free time, I enjoy stock trading, poker, soccer, golf, tennis, and drumming.</p>
-                        </div>
-                        <div class="about-card-group">
-                            <div class="about-card-wrapper">
-                                <a href="https://imagorehab.com/" target="_blank" rel="noopener noreferrer">
-                                    <div class="about-card">
-                                        <div class="about-card-icon-wrapper">
-                                            <div class="about-card-icon"><img src="assets/imago.png" /></div>
-                                        </div>
-                                        <div class="about-card-title">
-                                            Software Engineer Intern
-                                            <br />
-                                            <b>Imago Rehab</b>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight mb-4">
+          Building high-throughput data systems &amp; quantitative engines.
+        </h1>
 
-                            <div class="about-card-wrapper">
-                                <a href="https://www.cics.umass.edu/" target="_blank" rel="noopener noreferrer">
-                                    <div class="about-card">
-                                        <div class="about-card-icon-wrapper">
-                                            <div class="about-card-icon"><img src="assets/UMass_logo.png" /></div>
-                                        </div>
-                                        <div class="about-card-title">
-                                            Studying at
-                                            <br />
-                                            <b>University of Massachusetts Amherst</b>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+        <p class="text-base text-slate-400 leading-relaxed mb-6 font-normal">
+          I’m a Software Engineer at <span class="text-slate-200 font-medium">Wellington Management</span>, engineering Model Context Protocol (MCP) data lake systems and generative AI recommendation engines across $1.3T+ in assets. 
+          Dual major graduate in Computer Science and Economics from <span class="text-slate-200 font-medium">UMass Amherst</span> ('26).
+        </p>
 
-                            <div class="about-card-wrapper">
-                                <a href="https://www.linkedin.com/company/minutemen-international/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
-                                    <div class="about-card">
-                                        <div class="about-card-icon-wrapper">
-                                            <div class="about-card-icon"><img src="assets/MIEF_logo.jpg"/></div>
-                                        </div>
-                                        <div class="about-card-title">
-                                            Quantitative Software Engineer
-                                            <br />
-                                            <b>Minutemen Intl. Equity Fund</b>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="about-card-wrapper">
-                                <div class="about-card">
-                                    <div class="about-card-icon-wrapper">
-                                        <div class="about-card-icon"><img src="assets/pokerChip.svg" /></div>
-                                    </div>
-                                    <div class="about-card-title">
-                                        Interests
-                                        <br />
-                                        <b>Trading &middot; Poker &middot; Tennis &middot; Drums</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col about-educationcol">
-                        <div class="title">Education</div>
-                        <div class="about-timeline">
-
-                            <div class="timeline-card timeline-card-blue">
-                                <div class="timeline-card-title">University of Massachusetts Amherst</div>
-                                <div class="timeline-card-subtitle">BS &middot; Computer Science<br>BA &middot; Economics</div>
-                                <div class="timeline-card-time">Expected 2026</div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col about-experiencecol">
-                        <div class="title">Experience</div>
-                        <div class="about-timeline">
-
-                            <div class="timeline-card timeline-card-blue">
-                                <div class="timeline-card-title">Imago Rehab</div>
-                                <div class="timeline-card-subtitle">Software Engineer Intern</div>
-                                <div class="timeline-card-content">&middot; Created web app through Android Studio, Nodejs, and ExpressJS, connected to a MongoDB database.</div>
-                                <div class="timeline-card-content">&middot; Integrated AI-powered chatbot into app through OpenAI API to enhance customer support, offering
-                                    automated responses to user generated queries.</div>
-                                <div class="timeline-card-time">Sep 2024 - Dec 2024</div>
-                            </div>
-
-                            <div class="timeline-card timeline-card-blue">
-                                <div class="timeline-card-title">ISO New England</div>
-                                <div class="timeline-card-subtitle">Software/Data Verification Engineer Intern</div>
-                                <div class="timeline-card-content">&middot; Implemented a process to verify transformer energy levels across New England as well as dynamically adjust
-                                    their representation in the power grid model, enhancing daily energy forecast accuracy by >5%.</div>
-                                <div class="timeline-card-content">&middot; Developed Python script to filter and format >37,000 rows of Excel data, reducing processing time by ~30 hours.</div>
-                                <div class="timeline-card-content">&middot; Programmed internal tool to analyze discrepancies in load data files, build without any built-in libraries. </div>
-                                <div class="timeline-card-time">June 2024 - Aug 2024</div>
-                            </div>
-
-                            <div class="timeline-card timeline-card-green">
-                                <div class="timeline-card-title">BigBear.AI</div>
-                                <div class="timeline-card-subtitle">Software Developer Intern</div>
-                                <div class="timeline-card-content">&middot; Built top-to-bottom Jira cloud-based web application over three two-week sprints using agile technologies.</div>
-                                <div class="timeline-card-content">&middot; Implemented hierarchical UI and progress features to increase efficiency and scalability on the user-side.</div>
-                                <div class="timeline-card-content">&middot; Designed and integrated unit and CI/CD pipeline tests - increased total app test coverage by >25%.</div>
-                                <div class="timeline-card-content">&middot; Deployed on AWS ECS and released to the Atlassian Marketplace, contributed to 100% of total profits.</div>
-                                <div class="timeline-card-time">June 2022 - Aug 2022</div>
-                            </div>
-
-                            <div class="timeline-card timeline-card-green">
-                                <div class="timeline-card-title">US Soccer</div>
-                                <div class="timeline-card-subtitle">Soccer Referee</div>
-                                <div class="timeline-card-time">Sep 2017 - Aug 2022</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col about-skillcol">
-                        <div class="title">Skills</div>
-                        <div class="about-timeline">
-
-                            <div class="skills-title">Languages</div>
-                            <div class="skills-content">
-                                <div class="skills-tile">Python</div>
-                                <div class="skills-tile">Java</div>
-                                <div class="skills-tile">JavaScript</div>
-                                <div class="skills-tile">TypeScript</div>
-                                <div class="skills-tile">C</div>
-                                <div class="skills-tile">SQL</div>
-                                <div class="skills-tile">HTML/CSS</div>
-                            </div>
-
-                            <div class="skills-title">Technologies</div>
-                            <div class="skills-content">
-                                <div class="skills-tile">Node.js</div>
-                                <div class="skills-tile">React</div>
-                                <div class="skills-tile">Git</div>
-                                <div class="skills-tile">AWS (EC2)</div>
-                                <div class="skills-tile">Jira</div>
-                                <div class="skills-tile">Linux</div>
-                                <div class="skills-tile">CI/CD</div>
-                                <div class="skills-tile">Docker</div>
-                                <div class="skills-tile">Kubernetes</div>
-                                <div class="skills-tile">VBA</div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Quick Contacts & Links -->
+        <div class="flex flex-wrap items-center gap-3 text-xs">
+          <a href="#contact" class="px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold hover:bg-slate-200 transition-all">
+            Get in touch
+          </a>
+          <a href="https://github.com/WillPalaia" target="_blank" class="px-3.5 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/willpalaia/" target="_blank" class="px-3.5 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <i class="fab fa-linkedin text-blue-400"></i> LinkedIn
+          </a>
         </div>
+      </div>
 
-        <div id="projects" class="project">
-            <div class="container project-container">
-                <div class="row">
-                    <div class="title">Projects</div>
-                </div>
-                <div class="row project-row">
-
-                    <div class="col project-col">
-                        <div class="project-card">
-                            <div class="project-card-cover project-card-website"></div>
-                            <div class="project-card-content">
-                                <div class="project-card-title">Personal Website</div>
-                            </div>
-                            <a target="_blank" href="https://github.com/WillPalaia/Personal-Webpage">
-                                <div class="project-card-btn project-card-blackbutton">GitHub</div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col project-col">
-                        <div class="project-card">
-                            <div class="project-card-cover project-card-trailsafe"></div>
-                            <div class="project-card-content">
-                                <div class="project-card-title">TrailSafe</div>
-                            </div>
-                            <a target="_blank" href="https://github.com/WillPalaia/TrailSafe/raw/refs/heads/main/demo/Demo%20Video.mp4">
-                                <div class="project-card-btn">Demo</div>
-                            </a>
-                            <a target="_blank" href="https://github.com/WillPalaia/TrailSafe">
-                                <div class="project-card-btn project-card-blackbutton">GitHub</div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col project-col">
-                        <div class="project-card">
-                            <div class="project-card-cover project-card-LYSA"></div>
-                            <div class="project-card-content">
-                                <div class="project-card-title">Soccer Team Generator</div>
-                            </div>
-                            <a target="_blank" href="https://github.com/WillPalaia/LYSA-Eval-Framework">
-                                <div class="project-card-btn project-card-blackbutton">Github</div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col project-col">
-                        <div class="project-card">
-                            <div class="project-card-cover project-card-rubiks"></div>
-                            <div class="project-card-content">
-                                <div class="project-card-title">Rubik's Cube Solver</div>
-                            </div>
-                            <a target="_blank" href="https://github.com/WillPalaia/RubiksCubeSolver">
-                                <div class="project-card-btn project-card-blackbutton">Github</div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col project-col">
-                        <div class="project-card">
-                            <div class="project-card-cover project-card-spotify"></div>
-                            <div class="project-card-content">
-                                <div class="project-card-title">Voice Controlled Spotify</div>
-                            </div>
-                            <a target="_blank" href="https://github.com/WillPalaia/SpotifyVoiceRecognition">
-                                <div class="project-card-btn project-card-blackbutton">GitHub</div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col project-col">
-                        <div class="project-card">
-                            <div class="project-card-cover project-card-tracker"></div>
-                            <div class="project-card-content">
-                                <div class="project-card-title">Restaurant Food Tracker</div>
-                            </div>
-                            <a target="_blank" href="https://github.com/WillPalaia/RestaurantTracker">
-                                <div class="project-card-btn project-card-blackbutton">GitHub</div>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
+      <!-- Right Column: Interactive Playing Cards (The Hole Hand) -->
+      <div class="w-full md:w-auto flex flex-col items-center">
+        <div id="cardsStage" class="cards-stage py-4">
+          
+          <!-- Card 1: Ace of Spades (Wellington Management) -->
+          <div id="cardHeroLeft" class="playing-card card-hero-left p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start">
+                <span class="font-serif font-bold text-2xl text-slate-100 leading-none">A</span>
+                <span class="text-lg text-slate-100 leading-none">♠</span>
+              </div>
+              <div class="text-[10px] font-mono-subtle text-amber-300 font-medium tracking-wider mt-1 uppercase">
+                Enterprise AI
+              </div>
             </div>
-        </div>
 
-        <div class="footer">
-            Source: <a href="https://github.com/WillPalaia/Personal-Webpage" id="redir" target="_blank" rel="noopener noreferrer">github.com/WillPalaia/Personal-Webpage</a>
-        </div>
-        <!-- <script type="text/javascript" src="script.js"></script> -->
-        <!-- 8a%#J67% -->
-
-        <!-- Chat Widget -->
-        <div class="chat-widget">
-            <div class="chat-bubble" id="chatBubble">
-                <i class="fas fa-comment"></i>
+            <div class="my-auto py-2">
+              <h3 class="text-sm font-semibold text-white">Wellington Mgmt</h3>
+              <p class="text-xs text-emerald-400 font-medium mt-0.5">Software Engineer</p>
+              <p class="text-[11px] text-slate-400 mt-2 leading-relaxed">
+                FastMCP server over 20+ AWS Athena tables ($1.3T+ AUM). 85% LLM token reduction.
+              </p>
             </div>
-            <div class="chat-container" id="chatContainer">
-                <div class="chat-header">
-                    <span>Chat with Will's Virtual Assistant</span>
-                    <button class="close-chat" id="closeChat">&times;</button>
-                </div>
-                <div class="chat-messages" id="chatMessages">
-                    <div class="message bot">
-                        Hi! I'm Will's virtual assistant. How can I help you today?
-                    </div>
-                </div>
-                <div class="chat-input">
-                    <input type="text" id="userInput" placeholder="Type your message...">
-                    <button id="sendMessage">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <!-- Add Font Awesome for icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+            <div class="pt-2 border-t border-white/10 flex items-center justify-between text-[10px] font-mono-subtle text-slate-400">
+              <span>Boston, MA</span>
+              <span class="font-serif text-sm">A♠</span>
+            </div>
+          </div>
+
+          <!-- Card 2: King of Spades (UMass '26 / Quantitative) -->
+          <div id="cardHeroRight" class="playing-card card-hero-right p-5 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start">
+                <span class="font-serif font-bold text-2xl text-slate-100 leading-none">K</span>
+                <span class="text-lg text-slate-100 leading-none">♠</span>
+              </div>
+              <div class="text-[10px] font-mono-subtle text-rose-400 font-medium tracking-wider mt-1 uppercase">
+                Quantitative
+              </div>
+            </div>
+
+            <div class="my-auto py-2">
+              <h3 class="text-sm font-semibold text-white">UMass Amherst</h3>
+              <p class="text-xs text-rose-400 font-medium mt-0.5">BS CS &middot; BA Econ '26</p>
+              <p class="text-[11px] text-slate-400 mt-2 leading-relaxed">
+                Prediction Market Arbitrage (86% win rate, &lt;500ms). Concurrent execution engine.
+              </p>
+            </div>
+
+            <div class="pt-2 border-t border-white/10 flex items-center justify-between text-[10px] font-mono-subtle text-slate-400">
+              <span>Feb 2026</span>
+              <span class="font-serif text-sm">K♠</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: ABOUT / PLAYER PROFILE
+         Clean editorial metrics and professional overview
+         ====================================================================== -->
+    <section id="about" class="max-w-5xl mx-auto w-full px-4 sm:px-8 py-16 border-t border-white/5">
+      
+      <div class="mb-8">
+        <h2 class="text-xs uppercase font-mono-subtle tracking-widest text-amber-300/90 font-semibold mb-2">
+          01 / About
+        </h2>
+        <p class="text-2xl font-bold text-white tracking-tight">
+          Engineering reliable systems at scale.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         
-        <!-- Chat Widget Script -->
-        <script src="chat.js"></script>
-    </body>
+        <!-- Metrics Panel -->
+        <div class="md:col-span-5 space-y-3">
+          <div class="p-5 rounded-xl bg-[#13171f] border border-white/5">
+            <div class="text-xs text-slate-400 font-mono-subtle uppercase mb-1">Scale Managed</div>
+            <div class="text-2xl font-bold text-white tracking-tight">$1.3T+ AUM</div>
+            <p class="text-xs text-slate-400 mt-1">Config-driven MCP server across 20+ AWS Athena data lake tables at Wellington Management.</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#13171f] border border-white/5">
+            <div class="text-xs text-slate-400 font-mono-subtle uppercase mb-1">Token Optimization</div>
+            <div class="text-2xl font-bold text-emerald-400 tracking-tight">-85% Overhead</div>
+            <p class="text-xs text-slate-400 mt-1">On-demand schema discovery and sqlglot AST validation cutting ad-hoc lookup time by 90%.</p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-[#13171f] border border-white/5">
+            <div class="text-xs text-slate-400 font-mono-subtle uppercase mb-1">Quantitative Edge</div>
+            <div class="text-2xl font-bold text-amber-300 tracking-tight">86% Win Rate</div>
+            <p class="text-xs text-slate-400 mt-1">Sub-500ms asynchronous trading engine identifying 1%–3% Polymarket &amp; Kalshi price discrepancies.</p>
+          </div>
+        </div>
+
+        <!-- Narrative Description -->
+        <div class="md:col-span-7 space-y-4 text-sm text-slate-300 leading-relaxed font-normal">
+          <p>
+            I focus on the intersection of modern distributed infrastructure, enterprise generative AI protocols, and high-frequency quantitative systems.
+          </p>
+
+          <p>
+            Currently, as a Software Engineer at <span class="text-white font-medium">Wellington Management</span>, I build Model Context Protocol (MCP) data architecture in Python, FastMCP, and Starlette. 
+            I also engineered an AI recommendation engine that matches institutional client needs to 252 investment strategies ($915B AUM) with cited evidence, cutting research time from hours to under 30 seconds.
+          </p>
+
+          <p>
+            In algorithmic trading, I built a Python trading engine utilizing <code class="text-amber-200 bg-white/5 px-1.5 py-0.5 rounded font-mono-subtle text-xs">aiohttp</code> for real-time orderbook polling between Polymarket and Kalshi, achieving sub-500ms latency from signal to order.
+          </p>
+
+          <p>
+            I graduated in February 2026 from the <span class="text-white font-medium">University of Massachusetts Amherst</span> with a double degree: Bachelor of Science in Computer Science and Bachelor of Arts in Economics. In my free time, I enjoy algorithmic trading, art history, poker, tennis, golf, weightlifting, and drumming.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: SELECTED PROJECTS
+         Clean, elegant showcase cards
+         ====================================================================== -->
+    <section id="projects" class="max-w-5xl mx-auto w-full px-4 sm:px-8 py-16 border-t border-white/5">
+      
+      <div class="mb-8 flex items-center justify-between">
+        <div>
+          <h2 class="text-xs uppercase font-mono-subtle tracking-widest text-amber-300/90 font-semibold mb-2">
+            02 / Selected Work
+          </h2>
+          <p class="text-2xl font-bold text-white tracking-tight">
+            Projects &amp; Systems
+          </p>
+        </div>
+        <a href="https://github.com/WillPalaia" target="_blank" class="text-xs text-slate-400 hover:text-white flex items-center gap-1 transition-colors">
+          <span>All repositories on GitHub</span>
+          <i class="fas fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        
+        <!-- Project 1: Prediction Market Arbitrage -->
+        <div class="content-box p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono-subtle text-slate-400 mb-2">
+              <span class="text-amber-300 font-medium">Quantitative Trading</span>
+              <span>April 2026</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Prediction Market Arbitrage Engine</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Engineered a Python-based trading engine with aiohttp for asynchronous REST API polling to identify 1%–3% price discrepancies between Polymarket and Kalshi. Concurrent execution logic achieved sub-500ms latency from signal to order, generating a 7% monthly return on capital with an 86% trade success rate.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="pill-tag">Python</span>
+              <span class="pill-tag">aiohttp</span>
+              <span class="pill-tag">Polymarket</span>
+              <span class="pill-tag">Kalshi</span>
+              <span class="pill-tag">AsyncIO</span>
+            </div>
+            <a href="https://github.com/WillPalaia/PredictionMarketBetScript" target="_blank" class="text-xs font-medium text-amber-300 hover:text-amber-200 flex items-center gap-1.5 transition-colors">
+              <span>View Source Code</span>
+              <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Wellington FastMCP Server & Recommendation Engine -->
+        <div class="content-box p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono-subtle text-slate-400 mb-2">
+              <span class="text-emerald-400 font-medium">Enterprise AI &middot; Wellington</span>
+              <span>July 2026 – Present</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Model Context Protocol (MCP) Server</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Engineered a config-driven MCP server in Python, FastMCP, and Starlette over 20+ AWS Athena data lake tables ($1.3T+ AUM). Used on-demand schema discovery and sqlglot AST validation to reduce LLM token overhead by 85% and ad-hoc lookup time by 90%. Built AI recommendation engine for 252 investment strategies ($915B AUM).
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="pill-tag">FastMCP</span>
+              <span class="pill-tag">Starlette</span>
+              <span class="pill-tag">AWS Athena</span>
+              <span class="pill-tag">sqlglot</span>
+              <span class="pill-tag">Salesforce</span>
+            </div>
+            <span class="text-xs font-mono-subtle text-slate-400">Enterprise Production &middot; Boston, MA</span>
+          </div>
+        </div>
+
+        <!-- Project 3: TrailSafe -->
+        <div class="content-box p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono-subtle text-slate-400 mb-2">
+              <span class="text-slate-400 font-medium">Safety Application</span>
+              <span>Mobile-First</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">TrailSafe</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Outdoor safety and trail tracking application with offline telemetry caching, hazard reporting, and real-time emergency alert dispatch.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="pill-tag">Full-Stack</span>
+              <span class="pill-tag">Geolocation</span>
+              <span class="pill-tag">Mobile</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-medium">
+              <a href="https://github.com/WillPalaia/TrailSafe/raw/refs/heads/main/demo/Demo%20Video.mp4" target="_blank" class="text-slate-400 hover:text-white flex items-center gap-1">
+                <i class="fas fa-play text-[10px]"></i> Demo Video
+              </a>
+              <a href="https://github.com/WillPalaia/TrailSafe" target="_blank" class="text-amber-300 hover:text-amber-200 flex items-center gap-1">
+                <span>GitHub</span>
+                <i class="fas fa-external-link-alt text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Soccer Team Generator (LYSA) -->
+        <div class="content-box p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono-subtle text-slate-400 mb-2">
+              <span class="text-slate-400 font-medium">Optimization Algorithm</span>
+              <span>Python</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Soccer Team Generator</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Algorithmic player evaluation and team balancing framework that matches multi-dimensional player scores into balanced rosters for league tournaments.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="pill-tag">Python</span>
+              <span class="pill-tag">Algorithms</span>
+              <span class="pill-tag">Evaluation Framework</span>
+            </div>
+            <a href="https://github.com/WillPalaia/LYSA-Eval-Framework" target="_blank" class="text-xs font-medium text-amber-300 hover:text-amber-200 flex items-center gap-1 transition-colors">
+              <span>View Source Code</span>
+              <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5: Rubik's Cube 3D Solver -->
+        <div class="content-box p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono-subtle text-slate-400 mb-2">
+              <span class="text-slate-400 font-medium">Computation</span>
+              <span>Graph Search</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Rubik's Cube 3D Solver</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Algorithmic solver implementing graph search and heuristic pruning to solve scrambled 3x3 Rubik's Cubes in minimal move sequences with step-by-step resolution.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="pill-tag">Python</span>
+              <span class="pill-tag">Graph Search</span>
+              <span class="pill-tag">Heuristics</span>
+            </div>
+            <a href="https://github.com/WillPalaia/RubiksCubeSolver" target="_blank" class="text-xs font-medium text-amber-300 hover:text-amber-200 flex items-center gap-1 transition-colors">
+              <span>View Source Code</span>
+              <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 6: Voice Controlled Spotify -->
+        <div class="content-box p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono-subtle text-slate-400 mb-2">
+              <span class="text-slate-400 font-medium">Voice AI</span>
+              <span>Web APIs</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Voice Controlled Spotify</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Speech recognition interface connecting microphone input to Spotify Web API commands for hands-free music library control and intent parsing.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="pill-tag">Speech Recognition</span>
+              <span class="pill-tag">Spotify API</span>
+              <span class="pill-tag">Python</span>
+            </div>
+            <a href="https://github.com/WillPalaia/SpotifyVoiceRecognition" target="_blank" class="text-xs font-medium text-amber-300 hover:text-amber-200 flex items-center gap-1 transition-colors">
+              <span>View Source Code</span>
+              <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: EXPERIENCE TIMELINE
+         Clean, human, readable career history
+         ====================================================================== -->
+    <section id="experience" class="max-w-5xl mx-auto w-full px-4 sm:px-8 py-16 border-t border-white/5">
+      
+      <div class="mb-8">
+        <h2 class="text-xs uppercase font-mono-subtle tracking-widest text-amber-300/90 font-semibold mb-2">
+          03 / Experience
+        </h2>
+        <p class="text-2xl font-bold text-white tracking-tight">
+          Where I've Worked
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        
+        <!-- Wellington SWE -->
+        <div class="p-6 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+            <div>
+              <h3 class="text-base font-semibold text-white">Wellington Management</h3>
+              <p class="text-xs font-medium text-amber-300">Software Engineer &middot; Boston, MA</p>
+            </div>
+            <span class="text-xs font-mono-subtle text-slate-400">July 2026 – Present</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-300 space-y-1.5 mt-3 list-disc list-inside leading-relaxed">
+            <li>Engineered a config-driven Model Context Protocol (MCP) server in Python, FastMCP, and Starlette over 20+ AWS Athena data lake tables ($1.3T+ AUM), using on-demand schema discovery and sqlglot AST validation to cut LLM token overhead by 85% and reduce ad-hoc data lookup time by 90%.</li>
+            <li>Built an AI recommendation engine in Python (FastMCP) on AWS Athena, Salesforce, eVestment and Morningstar data that matches client needs to 252 investment strategies ($915B AUM) with cited evidence, cutting research time from hours to under 30 seconds.</li>
+          </ul>
+        </div>
+
+        <!-- Wellington SWE Intern -->
+        <div class="p-6 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+            <div>
+              <h3 class="text-base font-semibold text-white">Wellington Management</h3>
+              <p class="text-xs font-medium text-slate-300">Software Engineer Intern &middot; Boston, MA</p>
+            </div>
+            <span class="text-xs font-mono-subtle text-slate-400">June 2025 – August 2025</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-300 space-y-1.5 mt-3 list-disc list-inside leading-relaxed">
+            <li>Built an interactive Python dashboard with Pandas and IPyWidgets processing streaming bond data throughout trading hours, providing 70 fixed income team members with consolidated market analytics and trend visualizations.</li>
+            <li>Created a chatbot adaptor on internal AI platform that enables auto-generation of custom bots in minutes using only a keyword; deployed a Salesforce bot trained on 13,000+ internal documents, reducing manual build time by 95%.</li>
+          </ul>
+        </div>
+
+        <!-- Imago Rehab -->
+        <div class="p-6 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+            <div>
+              <h3 class="text-base font-semibold text-white">Imago Rehab</h3>
+              <p class="text-xs font-medium text-slate-300">Software Engineer Intern &middot; Lowell, MA</p>
+            </div>
+            <span class="text-xs font-mono-subtle text-slate-400">September 2024 – January 2025</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+            Cut customer support response time by 40% and handled 80% of common patient queries by integrating an AI-powered chatbot using Google Dialogflow.
+          </p>
+        </div>
+
+        <!-- ISO New England -->
+        <div class="p-6 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+            <div>
+              <h3 class="text-base font-semibold text-white">ISO New England</h3>
+              <p class="text-xs font-medium text-slate-300">Software Engineer Intern &middot; Holyoke, MA</p>
+            </div>
+            <span class="text-xs font-mono-subtle text-slate-400">June 2024 – August 2024</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-300 space-y-1.5 mt-2 list-disc list-inside leading-relaxed">
+            <li>Implemented an internal tool to automate transformer energy level verification and dynamic grid modeling in the New England energy grid, improving daily forecast accuracy by 6% and cutting manual analysis by 40+ hours/week.</li>
+            <li>Built a custom validation engine in pure Python that flagged data discrepancies with 100% accuracy across 37,000-row Excel datasets.</li>
+          </ul>
+        </div>
+
+        <!-- BigBear.AI -->
+        <div class="p-6 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+            <div>
+              <h3 class="text-base font-semibold text-white">BigBear.AI</h3>
+              <p class="text-xs font-medium text-slate-300">Software Engineer Intern &middot; Lexington, MA</p>
+            </div>
+            <span class="text-xs font-mono-subtle text-slate-400">June 2022 – August 2022</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-300 space-y-1.5 mt-2 list-disc list-inside leading-relaxed">
+            <li>Delivered a production-ready Jira web app to the Atlassian Marketplace using React, OAuth2, and agile workflows, improving project tracking visibility for distributed teams.</li>
+            <li>Architected and deployed Python APIs in Docker containers via AWS ECS, enabling high availability and scalability (+35% test coverage via GitHub Actions).</li>
+          </ul>
+        </div>
+
+        <!-- Minutemen International Equity Fund -->
+        <div class="p-6 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+            <div>
+              <h3 class="text-base font-semibold text-white">Minutemen International Equity Fund @ UMass Amherst</h3>
+              <p class="text-xs font-medium text-slate-300">Quantitative Software Engineer &middot; Amherst, MA</p>
+            </div>
+            <span class="text-xs font-mono-subtle text-slate-400">February 2023 – February 2026</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+            Engineered quantitative screening models, risk management scripts, and automated portfolio valuation pipelines for student-run global equity fund.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: TECHNICAL STACK
+         Categorized simply and cleanly
+         ====================================================================== -->
+    <section id="stack" class="max-w-5xl mx-auto w-full px-4 sm:px-8 py-16 border-t border-white/5">
+      
+      <div class="mb-8">
+        <h2 class="text-xs uppercase font-mono-subtle tracking-widest text-amber-300/90 font-semibold mb-2">
+          04 / Technical Stack
+        </h2>
+        <p class="text-2xl font-bold text-white tracking-tight">
+          Tools &amp; Languages
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-5 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="text-xs font-mono-subtle text-amber-300 uppercase mb-3">Languages</div>
+          <div class="space-y-1.5 text-xs text-slate-300">
+            <div>Python</div>
+            <div>Java</div>
+            <div>C</div>
+            <div>SQL (PostgreSQL, Athena)</div>
+            <div>TypeScript</div>
+            <div>JavaScript</div>
+            <div>HTML/CSS</div>
+            <div>VBA &middot; R</div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="text-xs font-mono-subtle text-rose-300 uppercase mb-3">AI &amp; Data Protocols</div>
+          <div class="space-y-1.5 text-xs text-slate-300">
+            <div class="text-white font-medium">FastMCP</div>
+            <div>Model Context Protocol (MCP)</div>
+            <div>Starlette</div>
+            <div>sqlglot (AST Validation)</div>
+            <div>OpenAI API</div>
+            <div>Google Dialogflow</div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="text-xs font-mono-subtle text-blue-300 uppercase mb-3">Frameworks &amp; Libs</div>
+          <div class="space-y-1.5 text-xs text-slate-300">
+            <div class="text-white font-medium">React</div>
+            <div>Node.js</div>
+            <div>Tailwind CSS</div>
+            <div>Pandas</div>
+            <div>IPyWidgets</div>
+            <div>aiohttp</div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-[#13171f] border border-white/5">
+          <div class="text-xs font-mono-subtle text-emerald-300 uppercase mb-3">Cloud &amp; DevOps</div>
+          <div class="space-y-1.5 text-xs text-slate-300">
+            <div class="text-white font-medium">AWS (Athena, S3, ECS)</div>
+            <div>Docker</div>
+            <div>Kubernetes</div>
+            <div>GitHub Actions CI/CD</div>
+            <div>Linux</div>
+            <div>Git &middot; Jira</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: CONTACT
+         Clean, human, approachable
+         ====================================================================== -->
+    <section id="contact" class="max-w-5xl mx-auto w-full px-4 sm:px-8 py-16 border-t border-white/5">
+      
+      <div class="mb-8">
+        <h2 class="text-xs uppercase font-mono-subtle tracking-widest text-amber-300/90 font-semibold mb-2">
+          05 / Contact
+        </h2>
+        <p class="text-2xl font-bold text-white tracking-tight">
+          Let's talk.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <!-- Form -->
+        <div class="md:col-span-7 p-6 rounded-xl bg-[#13171f] border border-white/5">
+          <form id="contactForm" class="space-y-4">
+            <div>
+              <label for="senderName" class="block text-xs font-mono-subtle text-slate-400 mb-1">Your Name</label>
+              <input type="text" id="senderName" required placeholder="Alex Mercer" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0c0e12] border border-white/10 text-white text-xs focus:outline-none focus:border-amber-300 transition-colors placeholder:text-slate-600" />
+            </div>
+
+            <div>
+              <label for="senderEmail" class="block text-xs font-mono-subtle text-slate-400 mb-1">Your Email</label>
+              <input type="email" id="senderEmail" required placeholder="alex@domain.com" class="w-full px-3.5 py-2.5 rounded-lg bg-[#0c0e12] border border-white/10 text-white text-xs focus:outline-none focus:border-amber-300 transition-colors placeholder:text-slate-600" />
+            </div>
+
+            <div>
+              <label for="senderMessage" class="block text-xs font-mono-subtle text-slate-400 mb-1">Message</label>
+              <textarea id="senderMessage" rows="4" required placeholder="Hi Will, I'd like to discuss a project..." class="w-full px-3.5 py-2.5 rounded-lg bg-[#0c0e12] border border-white/10 text-white text-xs focus:outline-none focus:border-amber-300 transition-colors placeholder:text-slate-600"></textarea>
+            </div>
+
+            <div class="submit-flip-box pt-1">
+              <div id="submitFlipper" class="submit-flipper">
+                <button type="submit" class="submit-face submit-front">
+                  <span>Send Message &rarr;</span>
+                </button>
+                <div class="submit-face submit-back">
+                  <span>Message Prepared &check;</span>
+                </div>
+              </div>
+            </div>
+
+            <span id="formFeedback" class="hidden"></span>
+          </form>
+        </div>
+
+        <!-- Direct Contact Details -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="p-6 rounded-xl bg-[#13171f] border border-white/5">
+            <div class="text-xs font-mono-subtle text-slate-400 uppercase mb-3">Direct Channels</div>
+            <div class="space-y-3 text-xs">
+              <div>
+                <span class="text-slate-500 block text-[11px]">Email</span>
+                <a href="mailto:wpalaia.2022@gmail.com" class="text-white hover:text-amber-200 transition-colors">
+                  wpalaia.2022@gmail.com
+                </a>
+              </div>
+
+              <div>
+                <span class="text-slate-500 block text-[11px]">Phone</span>
+                <a href="tel:978-429-5570" class="text-white hover:text-amber-200 transition-colors">
+                  978-429-5570
+                </a>
+              </div>
+
+              <div>
+                <span class="text-slate-500 block text-[11px]">Location</span>
+                <span class="text-slate-300">Boston, Massachusetts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-xl bg-[#13171f] border border-white/5">
+            <div class="text-xs font-mono-subtle text-slate-400 uppercase mb-3">Links &amp; Resume</div>
+            <div class="flex flex-col gap-2 text-xs">
+              <a href="https://github.com/WillPalaia" target="_blank" class="p-2.5 rounded-lg bg-[#0c0e12] border border-white/10 hover:border-white/20 text-slate-300 hover:text-white transition-all flex items-center justify-between">
+                <span class="flex items-center gap-2">
+                  <i class="fab fa-github"></i> github.com/WillPalaia
+                </span>
+                <i class="fas fa-arrow-right text-[10px] text-slate-500"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/willpalaia/" target="_blank" class="p-2.5 rounded-lg bg-[#0c0e12] border border-white/10 hover:border-white/20 text-slate-300 hover:text-white transition-all flex items-center justify-between">
+                <span class="flex items-center gap-2">
+                  <i class="fab fa-linkedin text-blue-400"></i> linkedin.com/in/willpalaia
+                </span>
+                <i class="fas fa-arrow-right text-[10px] text-slate-500"></i>
+              </a>
+
+              <a href="Will_Palaia_Resume.pdf" target="_blank" class="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/30 hover:border-amber-500/50 text-amber-200 hover:text-white transition-all flex items-center justify-between font-medium">
+                <span class="flex items-center gap-2">
+                  <i class="far fa-file-pdf text-rose-400"></i> Will_Palaia_Resume.pdf
+                </span>
+                <i class="fas fa-download text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         FOOTER
+         ====================================================================== -->
+    <footer class="mt-auto border-t border-white/5 px-4 sm:px-8 py-6 text-xs text-slate-500">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div>
+          <span>&copy; 2026 Will Palaia &middot; Boston, MA</span>
+        </div>
+        <div class="flex items-center gap-4 text-slate-400">
+          <a href="#hero" class="hover:text-white transition-colors">Top &uarr;</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>

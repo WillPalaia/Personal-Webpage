@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="neonBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="glowArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Grid -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.6">
+    <line x1="100" y1="100" x2="1100" y2="100"/>
+    <line x1="100" y1="200" x2="1100" y2="200"/>
+    <line x1="100" y1="300" x2="1100" y2="300"/>
+    <line x1="100" y1="400" x2="1100" y2="400"/>
+    <line x1="100" y1="500" x2="1100" y2="500"/>
+    <line x1="250" y1="80" x2="250" y2="520"/>
+    <line x1="450" y1="80" x2="450" y2="520"/>
+    <line x1="650" y1="80" x2="650" y2="520"/>
+    <line x1="850" y1="80" x2="850" y2="520"/>
+    <line x1="1050" y1="80" x2="1050" y2="520"/>
+  </g>
+
+  <!-- Header Badge -->
+  <rect x="100" y="45" width="280" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <circle cx="120" cy="63" r="5" fill="#10b981"/>
+  <text x="135" y="68" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="700" font-size="14" letter-spacing="1">PREDICTION MARKET ARB</text>
+
+  <rect x="400" y="45" width="210" height="36" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="415" y="68" fill="#93c5fd" font-family="-apple-system, sans-serif" font-weight="600" font-size="13">POLYMARKET ⇄ KALSHI</text>
+
+  <!-- Metrics Cards Top Right -->
+  <rect x="740" y="40" width="160" height="46" rx="8" fill="#064e3b" stroke="#059669" stroke-width="1.5"/>
+  <text x="755" y="60" fill="#6ee7b7" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">WIN RATE</text>
+  <text x="755" y="78" fill="#ecfdf5" font-family="-apple-system, sans-serif" font-size="18" font-weight="800">86% SUCCESS</text>
+
+  <rect x="920" y="40" width="180" height="46" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="935" y="60" fill="#a5b4fc" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">EXECUTION LATENCY</text>
+  <text x="935" y="78" fill="#eef2ff" font-family="-apple-system, sans-serif" font-size="18" font-weight="800">&lt; 500ms (AIOHTTP)</text>
+
+  <!-- Candlesticks / Order Flow -->
+  <!-- Candle 1 -->
+  <line x1="200" y1="340" x2="200" y2="440" stroke="#10b981" stroke-width="2"/>
+  <rect x="190" y="360" width="20" height="60" fill="#10b981" rx="3"/>
+  <!-- Candle 2 -->
+  <line x1="260" y1="310" x2="260" y2="410" stroke="#10b981" stroke-width="2"/>
+  <rect x="250" y="330" width="20" height="50" fill="#10b981" rx="3"/>
+  <!-- Candle 3 (Red dip) -->
+  <line x1="320" y1="320" x2="320" y2="430" stroke="#ef4444" stroke-width="2"/>
+  <rect x="310" y="350" width="20" height="45" fill="#ef4444" rx="3"/>
+  <!-- Candle 4 -->
+  <line x1="380" y1="280" x2="380" y2="390" stroke="#10b981" stroke-width="2"/>
+  <rect x="370" y="300" width="20" height="70" fill="#10b981" rx="3"/>
+
+  <!-- Alpha Area Wave -->
+  <path d="M 100 480 Q 250 430, 400 370 T 700 280 T 950 190 T 1100 130 L 1100 520 L 100 520 Z" fill="url(#glowArea)"/>
+  <path d="M 100 480 Q 250 430, 400 370 T 700 280 T 950 190 T 1100 130" fill="none" stroke="url(#neonGreen)" stroke-width="4"/>
+
+  <!-- Secondary Kalshi curve -->
+  <path d="M 100 500 Q 250 460, 400 395 T 700 310 T 950 220 T 1100 165" fill="none" stroke="url(#neonBlue)" stroke-width="3" stroke-dasharray="6,4"/>
+
+  <!-- Spread callout -->
+  <circle cx="820" cy="245" r="7" fill="#f59e0b"/>
+  <rect x="835" y="225" width="160" height="38" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="847" y="248" fill="#fbbf24" font-family="-apple-system, sans-serif" font-weight="700" font-size="13">1.0% - 3.0% SPREAD</text>
+
+  <!-- Live Order Fill Tag -->
+  <rect x="420" y="220" width="190" height="34" rx="6" fill="#134e4a" stroke="#14b8a6" stroke-width="1"/>
+  <text x="435" y="242" fill="#5eead4" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">⚡ SIGNAL → ORDER: 340ms</text>
+
+  <!-- Footer Stats -->
+  <text x="100" y="560" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="15" font-weight="500">Python · aiohttp · Concurrent REST Polling · Statistical Arbitrage Engine · 7% Monthly ROC</text>
+</svg>
+
